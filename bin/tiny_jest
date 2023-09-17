@@ -1,0 +1,4 @@
+#!/usr/bin/env node
+
+process.title = 'tiny_jest'
+require('../lib/cli/cli');

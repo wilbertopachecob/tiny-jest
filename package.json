@@ -1,0 +1,21 @@
+{
+  "name": "tiny-jest",
+  "version": "1.0.0",
+  "description": "Small JS test framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "node bin/tiny_jest"
+  },
+  "author": "Wilberto Pacheco Batista",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.49.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "glob": "^10.3.4"
+  },
+  "imports": {
+    "#lib": "./lib/index.js"
+  }
+}
