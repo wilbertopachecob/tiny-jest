@@ -51,6 +51,7 @@ If a test throws or rejects, it is marked as failed with the error message.
 | `beforeEach(fn)` | Run before each test (sync or async) |
 | `afterEach(fn)` | Run after each test (sync or async) |
 | `expect(value)` | Start an assertion |
+| `Any` | Wildcard type matcher for `toContainObject` |
 
 ### Matchers
 
@@ -60,7 +61,30 @@ If a test throws or rejects, it is marked as failed with the error message.
 | `.toEqual(expected)` | Loose equality (`==`) |
 | `.toBeNull()` | Value is `null` |
 | `.toThrow()` | Function throws an error |
+| `.toContainObject(expected)` | Received object contains a subset of keys/values |
 | `.not` | Negate the next matcher (e.g. `expect(x).not.toBe(y)`) |
+
+#### `toContainObject`
+
+Checks that the received object includes at least the keys in `expected`, with matching values. Extra keys on the received object are allowed.
+
+```js
+expect({ id: 1, name: "Alice", extra: true }).toContainObject({ id: 1, name: "Alice" });
+```
+
+Use built-in constructors as type matchers instead of literal values:
+
+```js
+expect({ id: 1, name: "Alice" }).toContainObject({ id: Number, name: String });
+```
+
+Use `Any` to match any value for a key:
+
+```js
+expect({ id: 1, name: "Alice" }).toContainObject({ id: Any, name: Any });
+```
+
+Nested objects are matched recursively. Supported type matchers include `Number`, `String`, `Boolean`, `BigInt`, `Symbol`, `Function`, `Object`, `Array`, `Date`, `RegExp`, `Map`, and `Set`.
 
 ## Project structure
 
