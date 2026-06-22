@@ -23,7 +23,9 @@
   "author": "Wilberto Pacheco Batista",
   "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.57.1"
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.5.0",
+    "globals": "^17.6.0"
   },
   "dependencies": {
     "chalk": "^5.6.2",
