@@ -23,6 +23,7 @@ module.exports = {
   rules: {},
   globals: {
     expect: "readonly",
+    Any: "readonly",
     it: "readonly",
     describe: "readonly",
     beforeEach: "readonly",
