@@ -1,21 +1,41 @@
 {
   "name": "tiny-jest",
-  "version": "1.0.0",
-  "description": "Small JS test framework",
-  "main": "index.js",
-  "scripts": {
-    "test": "node bin/tiny_jest"
+  "version": "2.0.0",
+  "description": "A minimal Jest-like test runner for learning and small projects",
+  "main": "lib/index.js",
+  "type": "commonjs",
+  "bin": {
+    "tiny-jest": "bin/tiny_jest"
   },
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node bin/tiny_jest",
+    "lint": "eslint ."
+  },
+  "files": [
+    "bin/",
+    "lib/",
+    "LICENSE",
+    "README.md"
+  ],
   "author": "Wilberto Pacheco Batista",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "eslint": "^8.49.0"
+    "eslint": "^8.57.1"
   },
   "dependencies": {
     "chalk": "^4.1.2",
-    "glob": "^10.3.4"
+    "glob": "^11.0.3"
   },
   "imports": {
     "#lib": "./lib/index.js"
-  }
+  },
+  "keywords": [
+    "testing",
+    "jest",
+    "test-runner",
+    "minimal"
+  ]
 }
